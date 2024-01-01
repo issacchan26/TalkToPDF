@@ -1,5 +1,9 @@
 # AWS Lambda RAG serverless function with Pinecone vector database
-This repo provides RAG serverless function connected with Pinecone vector database. The user can upload PDF files to Pinecone and input user prompts to this function to extract useful information.  
+This repo provides RAG serverless function connected with Pinecone vector database. The user can upload PDF files to Pinecone and input user prompts to this function to extract useful information.
+
+## Build your own Pinecone vector database
+Please run this [notebook](https://colab.research.google.com/drive/16Dj6xKIqDUL9Csu5tAEeo3n7x10h0tvZ?usp=sharing) to create the Pinecone vector database with your own PDF. It is modified from this [notebook](https://github.com/gkamradt/langchain-tutorials/blob/main/data_generation/Ask%20A%20Book%20Questions.ipynb) by adding dependencies.
+
 ## Docker
 The AWS Lambda function is built with Docker. This repo provides Dockerfile and requirements.txt to build the Docker image.  
 First, please make sure that you have set up your IAM user with AWS CLI, please refer to https://docs.aws.amazon.com/cli/latest/userguide/cli-authentication-user.html for instructions.  
