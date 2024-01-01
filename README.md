@@ -51,3 +51,19 @@ Enter your question by replacing the value of userprompt in option -d above, e.g
 ```bash
 curl -X POST -H 'content-type: application/json' -d '{ "userprompt": "What is RAG?" }' https://your_api_endpoints_of_talktopdf/
 ```
+## Example userprompts and responses
+The example used here is the first page of:  
+Lewis, Patrick, et al. "Retrieval-augmented generation for knowledge-intensive nlp tasks." Advances in Neural Information Processing Systems 33 (2020): 9459-9474.
+
+### Start with a simple question
+Q: What is RAG?  
+A: RAG stands for retrieval-augmented generation.  
+### Modify the keywords of the prompt to get desired answer
+Q: What is RAG in details?  
+A: RAG stands for retrieval-augmented generation. It is a model that combines  pre-trained parametric and non-parametric memory for language generation. In this model, the parametric memory is a pre-trained seq2seq model, and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever. There are two formulations of RAG: one that conditions on the same retrieved passages across the whole generated sequence, and another that can use different passages per token. RAG models have been shown to generate more specific, diverse, and factual language compared to state-of-the-art parametric-only seq2seq models.  
+### The model can only answer the question in the PDF
+Q: What is the color of an apple?  
+A: Based on the given context, it is not possible to determine the color of an apple.  
+### The model can provide accurate and useful information of the PDF 
+Q: Who published Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks?  
+A: The authors of "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks" are Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin, Naman Goyal, Heinrich Küttler, Mike Lewis, Wen-tau Yih, Tim Rocktäschel, Sebastian Riedel, and Douwe Kiela.  
